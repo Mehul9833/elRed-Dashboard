@@ -6,7 +6,6 @@ import {
   faCartShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
-import { Col } from "reactstrap";
 
 import Button from "../ui/Button";
 import ProfileDropdown from "./ProfileDropdown";

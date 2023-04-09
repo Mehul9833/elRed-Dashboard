@@ -1,0 +1,76 @@
+.sidebar {
+  min-height: calc(88vh - 3rem);
+  min-width: 15rem;
+
+  &__card {
+    height: 100% !important;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__logo {
+    text-align: center;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  &__links {
+    ul {
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-dark;
+      display: flex;
+      width: 100%;
+      padding: 0.8rem 0.5rem;
+
+      &:hover {
+        background-color: red;
+        color: $white !important;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &--active {
+      padding: 0.8rem 0.5rem;
+      background-color: $light-red;
+      color: $red !important;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+
+    li {
+      cursor: pointer;
+      display: block;
+      margin: 0.5rem 0;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__help {
+    border: 1px solid $text-light;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+
+    i {
+      font-size: 2rem;
+    }
+
+    &--button {
+      margin-bottom: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.page-content {
+  background-color: $bg-color;
+  min-height: calc(100vh - 12vh);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-content {
+  width: 100%;
+
+  .card {
+    height: 100%;
+  }
+}

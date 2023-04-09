@@ -1,0 +1,42 @@
+/* CSS reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+.button {
+  cursor: pointer;
+  background-color: $black;
+  color: $white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+
+  svg {
+    margin-right: 0.8rem;
+  }
+}

@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  gap: 1.25rem;
+
+  &__hamburger {
+    display: none;
+    margin-right: 3rem;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: 960px) {
+      display: block;
+    }
+
+    @media only screen and (max-width: 480px) {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    width: 12.5rem;
+
+    @media only screen and (min-width: 481px) and (max-width: 960px) {
+      width: 10rem;
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 700px) {
+      width: 8rem;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 6rem;
+    }
+
+    img {
+      height: 70px;
+
+      @media only screen and (max-width: 480px) {
+        height: 50px;
+      }
+    }
+  }
+
+  &__other {
+    width: 100%;
+  }
+
+  &__info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    background-color: $bg-color;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+
+    @media only screen and (min-width: 481px) and (max-width: 980px) {
+      width: 50%;
+      margin-right: 10px;
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 700px) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
+    svg {
+      color: $text-light;
+      margin-right: 0.5rem;
+    }
+
+    input {
+      border: none;
+      background-color: $bg-color;
+      width: 100%;
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60%;
+
+    @media only screen and (max-width: 980px) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      width: 40%;
+    }
+
+    &--checkout-btn {
+      margin-right: 3rem;
+
+      @media only screen and (max-width: 980px) {
+        display: none;
+      }
+    }
+  }
+
+  &__profile--dropdown {
+    cursor: pointer;
+
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 40px;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+      }
+
+      span {
+        margin-right: 0.5rem;
+
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+      }
+    }
+
+    &--menu {
+      margin-top: 5px !important;
+      width: auto;
+      padding: 0;
+      div {
+        padding: 0.5rem;
+        border-bottom: 1px solid $bg-color;
+
+        &:last-child {
+          border: none;
+        }
+
+        &:hover {
+          background-color: $text-light;
+        }
+      }
+    }
+  }
+}

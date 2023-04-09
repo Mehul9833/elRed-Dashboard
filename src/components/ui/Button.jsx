@@ -6,6 +6,7 @@ const Button = (props) => {
       className={`button ${
         props.className !== undefined ? props.className : ""
       }`}
+      onClick={props.onClick}
     >
       {props.children}
     </button>

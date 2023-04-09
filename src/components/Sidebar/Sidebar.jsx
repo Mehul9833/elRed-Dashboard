@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardBody } from "reactstrap";
 
 import logo from "../../assets/logo.png";
@@ -18,8 +18,6 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const linkItems = [
     {
       name: "Dashboard",

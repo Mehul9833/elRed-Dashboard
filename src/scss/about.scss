@@ -1,0 +1,196 @@
+.about {
+  padding: 0 0.8rem;
+
+  &__heading {
+    margin: 1.2rem 0 2.5rem 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-top: 0.3rem;
+
+    img {
+      height: 5rem;
+      padding: 0.5rem;
+      border: 1px solid $bg-color;
+      border-radius: 50%;
+    }
+
+    &--name {
+      h3 {
+        margin-bottom: 0.2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $text-light;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &--verify {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5rem;
+      i {
+        font-size: 1.6rem;
+        color: $text-light;
+      }
+
+      a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        border-bottom: 1px solid $link-color;
+        margin-bottom: 0.1rem;
+        color: $link-color;
+
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+  }
+
+  &__description {
+    width: 68%;
+    color: $text-medium;
+    display: flex;
+    margin-bottom: 2rem;
+
+    svg {
+      font-size: 0.8rem;
+      color: $red;
+      cursor: pointer;
+    }
+  }
+
+  &__tabs {
+    ul {
+      display: flex;
+      gap: 2.5rem;
+      padding-left: 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $bg-color;
+      position: relative;
+
+      li {
+        position: relative;
+        cursor: pointer;
+      }
+
+      li.active {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          /* background-color: green; */
+          width: 100%;
+          border-bottom: 2px solid $red;
+        }
+      }
+    }
+
+    &--panels {
+      &-panel {
+        display: none;
+        padding: 0.9rem 0;
+      }
+
+      &-panel.active {
+        display: block;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+
+    &--card {
+      min-width: 30% !important;
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+
+        &--title {
+          display: flex;
+          align-items: center;
+
+          h5 {
+            margin-bottom: 0;
+          }
+
+          i {
+            color: $text-light;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            margin-right: 0.5rem;
+          }
+        }
+
+        &--pencil {
+          color: $red;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-email {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &-emailId {
+        line-height: 1.2rem;
+      }
+
+      &-count {
+        background-color: $faint-red;
+        color: $red;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+
+      &-phone {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

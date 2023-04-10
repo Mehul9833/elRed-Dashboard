@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ContentCard from "../../components/ui/ContentCard";
+import React from "react";
 import logo from "../../assets/logo.png";
 import { MdVerified } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
@@ -8,9 +7,12 @@ import AboutActions from "./AboutActions";
 import { Card, CardBody } from "reactstrap";
 
 const About = () => {
-  const [companyDescription, setCompanyDescription] = useState(
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum odio aperiam totam soluta amet explicabo impedit tempora."
-  );
+  // const [companyDescription, setCompanyDescription] = useState(
+  //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum odio aperiam totam soluta amet explicabo impedit tempora."
+  // );
+
+  const companyDescription =
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum odio aperiam totam soluta amet explicabo impedit tempora.";
 
   return (
     <Card className="about">

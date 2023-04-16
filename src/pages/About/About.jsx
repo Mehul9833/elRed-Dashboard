@@ -7,10 +7,6 @@ import AboutActions from "./AboutActions";
 import { Card, CardBody } from "reactstrap";
 
 const About = () => {
-  // const [companyDescription, setCompanyDescription] = useState(
-  //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum odio aperiam totam soluta amet explicabo impedit tempora."
-  // );
-
   const companyDescription =
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum odio aperiam totam soluta amet explicabo impedit tempora.";
 

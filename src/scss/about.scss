@@ -106,15 +106,12 @@
   }
 
   &__info {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex: 1 1 0;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, auto);
+    gap: 20px;
 
     &--card {
-      min-width: 30% !important;
-
       &-header {
         display: flex;
         justify-content: space-between;
@@ -191,6 +188,146 @@
           margin-right: 0.5rem;
         }
       }
+
+      &-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        &__card {
+          display: flex;
+
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+
+        &--header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &__name {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            p {
+              margin-bottom: 0;
+              color: $text-dark;
+              font-weight: 500;
+            }
+
+            svg {
+              font-size: 1rem;
+              color: $text-light;
+            }
+          }
+
+          &__actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $red;
+            font-size: 0.9rem;
+
+            // svg {
+
+            //   color: $text-light;
+            // }
+          }
+
+          &__delete {
+            font-size: 1rem;
+            cursor: pointer;
+          }
+
+          &__pencil {
+            font-size: 0.9rem;
+            cursor: pointer;
+          }
+        }
+
+        &__information {
+          display: flex;
+          align-items: center;
+          gap: 0.9rem;
+
+          svg {
+            font-size: 1rem;
+            color: $text-light;
+          }
+
+          &--email {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+
+            svg {
+              width: 20%;
+            }
+
+            &-count {
+              background-color: $light-red;
+              color: $red;
+              border-radius: 50%;
+              padding: 4px;
+              font-size: 0.8rem;
+            }
+          }
+
+          &--info {
+            display: flex;
+            flex-wrap: wrap;
+            word-break: break-word;
+
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+.about-contact {
+  button {
+    width: 100%;
+  }
+
+  &-form {
+    width: 100%;
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      outline: none;
+      border: none;
+      background-color: $bg-color;
+      padding: 10px 10px 10px 15px;
+      border-radius: 0.5rem;
+      margin: 0.9rem 0;
+
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+
+      &:focus,
+      :active,
+      :focus-visible {
+        border: none;
+      }
+    }
+  }
+
+  &-form-input-box {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }

@@ -19,7 +19,7 @@ const AboutActions = () => {
     <p>Hello</p>
   ];
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const handleClick = (index) => setActiveIndex(index);
   const checkActive = (index, className) =>
     activeIndex === index ? className : "";

@@ -40,3 +40,49 @@ ol {
     margin-right: 0.8rem;
   }
 }
+
+.light-red-button {
+  cursor: pointer;
+  background-color: $light-red;
+  color: $red;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+
+  svg {
+    margin-right: 0.8rem;
+  }
+}
+
+.dark-red-button {
+  cursor: pointer;
+  background-color: $red;
+  color: $light-red;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+
+  svg {
+    margin-right: 0.8rem;
+  }
+}
+
+.offcanvas {
+  padding: 1.2rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    svg {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}

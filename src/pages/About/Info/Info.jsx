@@ -1,5 +1,5 @@
 import React from "react";
-import Contact from "./Contact";
+import Contact from "./contact/Contact";
 import Address from "./Address";
 import Hours from "./Hours";
 import Socials from "./Socials";

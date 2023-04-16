@@ -11,7 +11,10 @@ const ContentCard = (props) => {
           <div className="about__info--card-header--title">
             <i>{props.icon}</i> <h5>{props.heading}</h5>
           </div>
-          <i className="about__info--card-header--pencil">
+          <i
+            className="about__info--card-header--pencil"
+            onClick={props.handleIconClick}
+          >
             <TbPencil />
           </i>
         </div>

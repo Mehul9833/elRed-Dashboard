@@ -3,7 +3,6 @@ import LightRedButton from "../../../../components/ui/LightRedButton";
 import DarkRedButton from "../../../../components/ui/DarkRedButton";
 
 const EditContactDetails = (props) => {
-  const [currentFormData, setCurrentFormData] = useState({});
   const [emailData, setEmailData] = useState([]);
   const [phoneData, setPhoneData] = useState([]);
 
@@ -13,7 +12,6 @@ const EditContactDetails = (props) => {
     );
 
     if (filterFormData.length !== 0) {
-      setCurrentFormData(filterFormData[0]);
       setEmailData(filterFormData[0].emails);
       setPhoneData(filterFormData[0].phones);
     }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContentCard from "../../../../components/ui/ContentCard";
 import { RiContactsBookLine } from "react-icons/ri";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 import RightSidebar from "../../../../components/ui/RightSidebar";
 
@@ -44,8 +44,7 @@ const Contact = () => {
   }
 
   function handleDeleteContact(index) {
-    if (index === 0) {
-      setError("Cannot Delete Last Details");
+    if (contactDetails.length === 1) {
       return;
     }
 
@@ -53,6 +52,12 @@ const Contact = () => {
     contactDetailsDup.splice(index, 1);
 
     setContactDetails(contactDetailsDup);
+  }
+
+  function handleSaveContacts() {
+    const contactDetailsDup = [...contactDetails];
+    setContactDetails(contactDetails);
+    setShowSidebar(false);
   }
 
   return (
@@ -67,13 +72,17 @@ const Contact = () => {
             <FaEnvelope />
             <EmailSection emails={contactDetails[0].emails} />
           </div>
-          <div className="about__info--contact__action">
-            <span className="about__info--contact__count">+5</span>
-          </div>
+          {contactDetails.length > 1 && (
+            <div className="about__info--contact__action">
+              <span className="about__info--contact__count">
+                +{contactDetails.length}
+              </span>
+            </div>
+          )}
         </div>
         <div className="about__info--contact">
           <div className="about__info--contact__information">
-            <FaEnvelope />
+            <FaPhone />
             <PhoneSection phones={contactDetails[0].phones} />
           </div>
         </div>
@@ -92,6 +101,7 @@ const Contact = () => {
               setEditId={setEditId}
               handleDeleteContact={handleDeleteContact}
               error={error}
+              handleSaveContacts={handleSaveContacts}
             />
           )}
 

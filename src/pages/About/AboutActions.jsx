@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import Info from "./Info/Info";
+import PrivacyPolicy from "./privacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./TermsAndCondition/TermsAndConditions";
 
 const AboutActions = () => {
   const tabes = [
@@ -13,10 +15,10 @@ const AboutActions = () => {
 
   const panels = [
     <Info />,
-    <p>Heyy</p>,
-    <p>Hii</p>,
-    <p>Hello</p>,
-    <p>Hello</p>
+    <p>Coming Soon</p>,
+    <p>Coming Soon</p>,
+    <PrivacyPolicy />,
+    <TermsAndConditions />
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

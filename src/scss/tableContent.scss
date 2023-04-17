@@ -1,0 +1,67 @@
+.table-content {
+  display: flex;
+  gap: 0.8rem;
+
+  &__content {
+    width: 75%;
+
+    &--title {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      margin-bottom: 2rem;
+      h5 {
+        margin-bottom: 0;
+      }
+
+      svg {
+        font-size: 0.8rem;
+        color: $red;
+        cursor: pointer;
+      }
+    }
+
+    &--body {
+      max-height: 18rem;
+      overflow-y: hidden;
+    }
+
+    &--section {
+      margin-bottom: 1.2rem;
+      h5 {
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $text-medium;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__table {
+    width: 25%;
+
+    &--card {
+      h6 {
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        padding-left: 0;
+
+        li {
+          margin-bottom: 1rem;
+          cursor: pointer;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

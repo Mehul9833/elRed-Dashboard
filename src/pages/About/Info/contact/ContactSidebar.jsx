@@ -53,7 +53,7 @@ const ContactSidebar = (props) => {
         <span className="text-danger">props.error</span>
       )}
 
-      <DarkRedButton>Save</DarkRedButton>
+      <DarkRedButton onClick={props.handleSaveContacts}>Save</DarkRedButton>
     </>
   );
 };

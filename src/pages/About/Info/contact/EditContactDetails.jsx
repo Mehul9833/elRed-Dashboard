@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import LightRedButton from "../../../../components/ui/LightRedButton";
 import DarkRedButton from "../../../../components/ui/DarkRedButton";
 
+import { AiOutlinePlusCircle } from "react-icons/ai";
+
 const EditContactDetails = (props) => {
   const [emailData, setEmailData] = useState([]);
   const [phoneData, setPhoneData] = useState([]);
@@ -64,8 +66,6 @@ const EditContactDetails = (props) => {
   return (
     <>
       <div className="about-contact">
-        <p>Please provide the company's email & contacts</p>
-
         <div className="about-contact-form">
           <div className="about-contact-form-input-box">
             <label for="email">Email ID</label>
@@ -84,7 +84,10 @@ const EditContactDetails = (props) => {
             ))}
 
             <LightRedButton onClick={handleMoreEmail}>
-              <span>Add More</span>
+              <span>
+                <AiOutlinePlusCircle />
+                Add More
+              </span>
             </LightRedButton>
           </div>
 
@@ -105,7 +108,10 @@ const EditContactDetails = (props) => {
             ))}
 
             <LightRedButton onClick={handleMorePhone}>
-              <span>Add More</span>
+              <span>
+                <AiOutlinePlusCircle />
+                Add More
+              </span>
             </LightRedButton>
           </div>
         </div>

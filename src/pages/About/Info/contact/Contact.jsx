@@ -92,7 +92,7 @@ const Contact = () => {
           toggle={handleToggleCanvase}
           isOpen={showSidebar}
           title={"Contacts"}
-          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+          description="Please provide the company's email & contacts"
         >
           {!showForm && (
             <ContactSidebar

@@ -93,6 +93,10 @@
       &:active {
         outline: none;
       }
+
+      &::placeholder {
+        font-weight: 600;
+      }
     }
   }
 
@@ -158,7 +162,7 @@
         }
 
         &:hover {
-          background-color: $text-light;
+          background-color: $light-red;
         }
       }
     }

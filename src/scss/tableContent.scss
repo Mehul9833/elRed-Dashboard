@@ -45,6 +45,10 @@
   &__table {
     width: 25%;
 
+    &--active {
+      font-weight: 600;
+    }
+
     &--card {
       h6 {
         margin-bottom: 2rem;

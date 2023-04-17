@@ -9,7 +9,7 @@ const AboutActions = () => {
     "Info",
     "FAQ",
     "Complaints and feedback",
-    "privacy Policy",
+    "Privacy Policy",
     "Terms & Conditions"
   ];
 

@@ -13,7 +13,7 @@ import {
   faList,
   faScroll,
   faTrophy,
-  faUserGroup,
+  faUserGroup
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
@@ -22,43 +22,44 @@ const Sidebar = () => {
     {
       name: "Dashboard",
       icon: faList,
-      link: "./dashboard",
+      link: "./dashboard"
     },
     {
       name: "Orders",
       icon: faBox,
-      link: "./orders",
+      link: "./orders"
     },
     {
       name: "Team Members",
       icon: faUserGroup,
-      link: "./team-members",
+      link: "./team-members"
     },
     {
       name: "Partners",
       icon: faHandshake,
-      link: "./partners",
+      link: "./partners"
     },
     {
       name: "Product Listings",
       icon: faBoxesStacked,
-      link: "./partners",
+      link: "./partners"
     },
     {
       name: "Awards & Honours",
       icon: faTrophy,
-      link: "./awards-and-honours",
+      link: "./awards-and-honours"
     },
     {
       name: "About Us",
       icon: faAddressCard,
-      link: "./about",
+
+      link: "./about"
     },
     {
       name: "Payment Info",
       icon: faScroll,
-      link: "payment",
-    },
+      link: "payment"
+    }
   ];
 
   return (

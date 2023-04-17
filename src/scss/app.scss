@@ -48,16 +48,23 @@ ol {
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
+  font-weight: 500;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   svg {
-    margin-right: 0.8rem;
+    margin-right: 0.5rem;
   }
 }
 
 .dark-red-button {
   cursor: pointer;
   background-color: $red;
-  color: $light-red;
+  color: $white;
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;

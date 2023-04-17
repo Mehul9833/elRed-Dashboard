@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody } from "reactstrap";
 
-import { TbPencil } from "react-icons/tb";
+import { FaPen } from "react-icons/fa";
 
 const ContentCard = (props) => {
   return (
@@ -12,7 +12,7 @@ const ContentCard = (props) => {
             {props.icon} <h5>{props.heading}</h5>
           </div>
 
-          <TbPencil
+          <FaPen
             onClick={props.handleIconClick}
             className="about__info--card-header--pencil"
           />

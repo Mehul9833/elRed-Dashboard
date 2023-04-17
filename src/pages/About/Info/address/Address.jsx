@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import ContentCard from "../../../../components/ui/ContentCard";
 import { MdLocationPin } from "react-icons/md";
 import RightSidebar from "../../../../components/ui/RightSidebar";
-import InputField from "../../../../components/ui/InputField";
-import DarkRedButton from "../../../../components/ui/DarkRedButton";
+
+import AddressForm from "./AddressForm";
 
 const Address = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -18,67 +18,13 @@ const Address = () => {
   });
 
   const [addressString, setAddressString] = useState("");
-  const [onChangeAddressStore, setOnChangeAddressStore] = useState({
-    ...address
-  });
 
   function handleToggleCanvase() {
     setShowSidebar(!showSidebar);
   }
 
-  function handleInputChange(e) {
-    const addressDup = { ...address };
-
-    switch (e.target.id) {
-      case "floor":
-        setOnChangeAddressStore({
-          ...addressDup,
-          floor: e.target.value
-        });
-        break;
-
-      case "area":
-        setOnChangeAddressStore({
-          ...addressDup,
-          area: e.target.value
-        });
-        break;
-
-      case "landmark":
-        setOnChangeAddressStore({
-          ...addressDup,
-          landmark: e.target.value
-        });
-        break;
-
-      case "town":
-        setOnChangeAddressStore({
-          ...addressDup,
-          town: e.target.value
-        });
-        break;
-
-      case "city":
-        setOnChangeAddressStore({
-          ...addressDup,
-          city: e.target.value
-        });
-        break;
-
-      case "pincode":
-        setOnChangeAddressStore({
-          ...addressDup,
-          pincode: e.target.value
-        });
-        break;
-
-      default:
-        return;
-    }
-  }
-
-  function handleSubmit() {
-    setAddress(onChangeAddressStore);
+  function handleSubmit(data) {
+    setAddress(data);
     setShowSidebar(false);
   }
 
@@ -110,69 +56,7 @@ const Address = () => {
           title="Location"
           description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         >
-          <div className="about__info--location--form">
-            <InputField
-              placeholder={"Floor Number / Block no / Office Name"}
-              value={onChangeAddressStore.floor}
-              id={"floor"}
-              type="text"
-              name="floor"
-              onChange={(e) => {
-                handleInputChange(e);
-              }}
-            />
-            <InputField
-              placeholder={"Area / Locality"}
-              value={onChangeAddressStore.area}
-              id={"area"}
-              type="text"
-              name="area"
-              onChange={(e) => {
-                handleInputChange(e);
-              }}
-            />
-            <InputField
-              placeholder={"Nearest Landmark"}
-              value={onChangeAddressStore.landmark}
-              id={"landmark"}
-              type="text"
-              name="landmark"
-              onChange={(e) => {
-                handleInputChange(e);
-              }}
-            />
-            <InputField
-              placeholder={"Town / City"}
-              value={onChangeAddressStore.town}
-              id={"town"}
-              type="text"
-              name="town"
-              onChange={(e) => {
-                handleInputChange(e);
-              }}
-            />
-            <InputField
-              placeholder={"City"}
-              value={onChangeAddressStore.city}
-              id={"city"}
-              type="text"
-              name="city"
-              onChange={(e) => {
-                handleInputChange(e);
-              }}
-            />
-            <InputField
-              placeholder={"Pincode"}
-              value={onChangeAddressStore.pincode}
-              id={"pincode"}
-              type="text"
-              name="pincode"
-              onChange={(e) => {
-                handleInputChange(e);
-              }}
-            />
-          </div>
-          <DarkRedButton onClick={handleSubmit}>Save</DarkRedButton>
+          <AddressForm address={address} handleSubmit={handleSubmit} />
         </RightSidebar>
       )}
     </ContentCard>

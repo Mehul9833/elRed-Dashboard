@@ -56,7 +56,7 @@ const Contact = () => {
 
   function handleSaveContacts() {
     const contactDetailsDup = [...contactDetails];
-    setContactDetails(contactDetails);
+    setContactDetails(contactDetailsDup);
     setShowSidebar(false);
   }
 

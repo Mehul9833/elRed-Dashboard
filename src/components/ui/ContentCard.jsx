@@ -9,14 +9,13 @@ const ContentCard = (props) => {
       <CardBody>
         <div className="about__info--card-header">
           <div className="about__info--card-header--title">
-            <i>{props.icon}</i> <h5>{props.heading}</h5>
+            {props.icon} <h5>{props.heading}</h5>
           </div>
-          <i
-            className="about__info--card-header--pencil"
+
+          <TbPencil
             onClick={props.handleIconClick}
-          >
-            <TbPencil />
-          </i>
+            className="about__info--card-header--pencil"
+          />
         </div>
         {props.children}
       </CardBody>

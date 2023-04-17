@@ -10,23 +10,29 @@ import {
 import EmailSection from "./EmailSection";
 import PhoneSection from "./PhoneSection";
 
+import { TbPencil } from "react-icons/tb";
+
 const ContactSidebar = (props) => {
   return (
     <>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-      <div className="about__info--contact-details">
-        {props.contactDetails.map((details, index) => (
-          <Card key={index}>
-            <CardBody className="about__info--contact-details__card">
-              <div className="about__info--contact-details--header">
-                <div className="about__info--contact-details--header__name">
+
+      {props.contactDetails.map((details, index) => (
+        <Card className="about__info--contact-card">
+          <CardBody>
+            <div className="about__info--contact__details">
+              <div className="about__info--contact__header">
+                <div className="about__info--contact__header--title">
                   <FaAddressBook />
                   <p>{details.name}</p>
                 </div>
-                <div className="about__info--contact-details--header__actions">
-                  <AiFillDelete className="about__info--contact-details--header__delete" />
-                  <FaPencilAlt
-                    className="about__info--contact-details--header__pencil"
+                <div className="about__info--contact__header--actions">
+                  <AiFillDelete
+                    className="about__info--contact-details--header__delete"
+                    onClick={() => props.handleDeleteContact(index)}
+                  />
+
+                  <TbPencil
                     onClick={() => {
                       props.setShowForm(true);
                       props.setEditId(details.id);
@@ -34,22 +40,22 @@ const ContactSidebar = (props) => {
                   />
                 </div>
               </div>
-              <div className="about__info--contact-details__information">
+              <div className="about__info--contact__details--info">
                 <FaEnvelope />
-                <div className="about__info--contact-details__information--info">
-                  <EmailSection emails={details.emails} />
-                </div>
+                <EmailSection emails={details.emails} />
               </div>
-              <div className="about__info--contact-details__information">
-                <FaPhone />
-                <div className="about__info--contact-details__information--info">
-                  <PhoneSection phones={details.phones} />
-                </div>
+              <div className="about__info--contact__details--info">
+                <FaEnvelope />
+                <PhoneSection phones={details.phones} />
               </div>
-            </CardBody>
-          </Card>
-        ))}
-      </div>
+            </div>
+          </CardBody>
+        </Card>
+      ))}
+
+      <span className="text-danger">
+        {props.error.length !== 0 && props.error}
+      </span>
     </>
   );
 };

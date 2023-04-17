@@ -44,6 +44,7 @@ const EditContactDetails = (props) => {
 
     props.setContactDetails(contactDetailsDup);
     props.setShowForm(false);
+    props.setError("");
   }
 
   function handleInputChange(e, index) {

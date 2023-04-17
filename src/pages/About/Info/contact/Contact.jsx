@@ -39,10 +39,24 @@ const Contact = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState(null);
+  const [error, setError] = useState("");
 
   function handleToggleCanvase() {
     setShowSidebar(!showSidebar);
     setShowForm(false);
+    setError("");
+  }
+
+  function handleDeleteContact(index) {
+    if (index === 0) {
+      setError("Cannot Delete Last Details");
+      return;
+    }
+
+    const contactDetailsDup = [...contactDetails];
+    contactDetailsDup.splice(index, 1);
+
+    setContactDetails(contactDetailsDup);
   }
 
   return (
@@ -52,22 +66,18 @@ const Contact = () => {
         heading={"Contact"}
         handleIconClick={handleToggleCanvase}
       >
-        <div className="about__info--contact-details__information">
-          <div className="about__info--contact-details__information--email">
+        <div className="about__info--contact">
+          <div className="about__info--contact__information">
             <FaEnvelope />
-            <div className="about__info--contact-details__information--info">
-              <EmailSection emails={contactDetails[0].emails} />
-            </div>
+            <EmailSection emails={contactDetails[0].emails} />
           </div>
-
-          <span className="about__info--contact-details__information--email-count">
-            +5
-          </span>
+          <div className="about__info--contact__action">
+            <span className="about__info--contact__count">+5</span>
+          </div>
         </div>
-
-        <div className="about__info--contact-details__information">
-          <FaPhone />
-          <div className="about__info--contact-details__information--info">
+        <div className="about__info--contact">
+          <div className="about__info--contact__information">
+            <FaEnvelope />
             <PhoneSection phones={contactDetails[0].phones} />
           </div>
         </div>
@@ -79,6 +89,8 @@ const Contact = () => {
               contactDetails={contactDetails}
               setShowForm={setShowForm}
               setEditId={setEditId}
+              handleDeleteContact={handleDeleteContact}
+              error={error}
             />
           )}
 
@@ -88,6 +100,8 @@ const Contact = () => {
               contactDetails={contactDetails}
               setContactDetails={setContactDetails}
               setShowForm={setShowForm}
+              error={error}
+              setError={setError}
             />
           )}
         </RightSidebar>

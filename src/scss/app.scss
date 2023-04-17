@@ -133,3 +133,10 @@ ol {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.offcanvas__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+}

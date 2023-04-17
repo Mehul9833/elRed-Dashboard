@@ -1,5 +1,5 @@
 import React from "react";
-import ContentCard from "../../../components/ui/ContentCard";
+import ContentCard from "../../../../components/ui/ContentCard";
 
 const Statements = () => {
   return (

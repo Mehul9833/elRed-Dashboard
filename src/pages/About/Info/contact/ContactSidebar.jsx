@@ -11,45 +11,47 @@ import DarkRedButton from "../../../../components/ui/DarkRedButton";
 const ContactSidebar = (props) => {
   return (
     <>
-      {props.contactDetails.map((details, index) => (
-        <Card className="about__info--contact-card">
-          <CardBody>
-            <div className="about__info--contact__details">
-              <div className="about__info--contact__header">
-                <div className="about__info--contact__header--title">
-                  <FaAddressBook />
-                  <p>{details.name}</p>
-                </div>
-                <div className="about__info--contact__header--actions">
-                  <AiFillDelete
-                    className="about__info--contact-details--header__delete"
-                    onClick={() => props.handleDeleteContact(index)}
-                  />
+      <div>
+        {props.contactDetails.map((details, index) => (
+          <Card className="about__info--contact-card">
+            <CardBody>
+              <div className="about__info--contact__details">
+                <div className="about__info--contact__header">
+                  <div className="about__info--contact__header--title">
+                    <FaAddressBook />
+                    <p>{details.name}</p>
+                  </div>
+                  <div className="about__info--contact__header--actions">
+                    <AiFillDelete
+                      className="about__info--contact-details--header__delete"
+                      onClick={() => props.handleDeleteContact(index)}
+                    />
 
-                  <TbPencil
-                    onClick={() => {
-                      props.setShowForm(true);
-                      props.setEditId(details.id);
-                    }}
-                  />
+                    <TbPencil
+                      onClick={() => {
+                        props.setShowForm(true);
+                        props.setEditId(details.id);
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="about__info--contact__details--info">
+                  <FaEnvelope />
+                  <EmailSection emails={details.emails} />
+                </div>
+                <div className="about__info--contact__details--info">
+                  <FaEnvelope />
+                  <PhoneSection phones={details.phones} />
                 </div>
               </div>
-              <div className="about__info--contact__details--info">
-                <FaEnvelope />
-                <EmailSection emails={details.emails} />
-              </div>
-              <div className="about__info--contact__details--info">
-                <FaEnvelope />
-                <PhoneSection phones={details.phones} />
-              </div>
-            </div>
-          </CardBody>
-        </Card>
-      ))}
+            </CardBody>
+          </Card>
+        ))}
+      </div>
 
-      <span className="text-danger">
-        {props.error.length !== 0 && props.error}
-      </span>
+      {props.error.length !== 0 && (
+        <span className="text-danger">props.error</span>
+      )}
 
       <DarkRedButton>Save</DarkRedButton>
     </>

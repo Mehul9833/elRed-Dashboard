@@ -357,8 +357,16 @@
             gap: 0.5rem;
             svg {
               color: $red;
-              font-size: 1.2rem;
+
               cursor: pointer;
+            }
+
+            &-delete {
+              font-size: 1.2rem;
+            }
+
+            &-pencil {
+              font-size: 0.9rem;
             }
           }
         }

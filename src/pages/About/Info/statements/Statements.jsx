@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Card, CardBody } from "reactstrap";
 import ContentCard from "../../../../components/ui/ContentCard";
-import { FaQuoteLeft, FaPlusCircle } from "react-icons/fa";
+import { FaQuoteLeft, FaPlusCircle, FaPen } from "react-icons/fa";
 import RightSidebar from "../../../../components/ui/RightSidebar";
 import { AiFillDelete } from "react-icons/ai";
-import { TbPencil } from "react-icons/tb";
 
 const Statements = () => {
   const [statements, setStatements] = useState([
@@ -60,8 +59,8 @@ const Statements = () => {
                   <div className="about__info--statements-sidebar__header">
                     <FaQuoteLeft />
                     <div className="about__info--statements-sidebar__header--actions">
-                      <AiFillDelete />
-                      <TbPencil />
+                      <AiFillDelete className="about__info--statements-sidebar__header--actions-delete" />
+                      <FaPen className="about__info--statements-sidebar__header--actions-pencil" />
                     </div>
                   </div>
                   <div className="about__info--statements-sidebar__content">

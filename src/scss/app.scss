@@ -72,17 +72,25 @@ ol {
 
   &__header {
     display: flex;
-    align-items: center;
+    // align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
-    svg {
-      font-size: 2rem;
-      cursor: pointer;
-    }
+    flex-direction: column;
 
-    h3 {
-      font-size: 2rem;
-      margin-bottom: 0;
+    &--title {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      svg {
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -6,12 +6,11 @@ import EmailSection from "./EmailSection";
 import PhoneSection from "./PhoneSection";
 
 import { TbPencil } from "react-icons/tb";
+import DarkRedButton from "../../../../components/ui/DarkRedButton";
 
 const ContactSidebar = (props) => {
   return (
     <>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
       {props.contactDetails.map((details, index) => (
         <Card className="about__info--contact-card">
           <CardBody>
@@ -51,6 +50,8 @@ const ContactSidebar = (props) => {
       <span className="text-danger">
         {props.error.length !== 0 && props.error}
       </span>
+
+      <DarkRedButton>Save</DarkRedButton>
     </>
   );
 };

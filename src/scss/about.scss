@@ -259,6 +259,56 @@
         font-weight: 500;
       }
     }
+
+    &--hours {
+      p {
+        margin-bottom: 0;
+        color: $text-medium;
+        line-height: 1.6rem;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    &--links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 2rem 0;
+
+      &-link {
+        cursor: pointer;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: $text-dark;
+
+          &:hover {
+            color: $text-medium;
+          }
+
+          span {
+            font-weight: 500;
+            // margin-top: 0.5rem;
+          }
+        }
+
+        svg {
+          color: $text-light;
+          font-size: 1.8rem;
+        }
+
+        &:hover {
+          font-weight: 600;
+          color: $text-dark;
+        }
+      }
+    }
   }
 }
 

@@ -92,6 +92,7 @@ const Address = () => {
           toggle={handleToggleCanvase}
           isOpen={showSidebar}
           title="Location"
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         >
           <div className="about__info--location--form">
             <InputField

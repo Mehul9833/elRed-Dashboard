@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody } from "reactstrap";
 import { AiFillDelete } from "react-icons/ai";
-import { FaAddressBook, FaEnvelope } from "react-icons/fa";
+import { FaAddressBook, FaEnvelope, FaPhone } from "react-icons/fa";
 import EmailSection from "./EmailSection";
 import PhoneSection from "./PhoneSection";
 
@@ -40,7 +40,7 @@ const ContactSidebar = (props) => {
                   <EmailSection emails={details.emails} />
                 </div>
                 <div className="about__info--contact__details--info">
-                  <FaEnvelope />
+                  <FaPhone />
                   <PhoneSection phones={details.phones} />
                 </div>
               </div>

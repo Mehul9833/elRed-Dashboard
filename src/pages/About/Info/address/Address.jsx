@@ -28,37 +28,53 @@ const Address = () => {
 
   function handleInputChange(e) {
     const addressDup = { ...address };
-    console.log("here i am", e.target.id);
+
     switch (e.target.id) {
       case "floor":
-        addressDup["floor"] = e.target.value;
+        setOnChangeAddressStore({
+          ...addressDup,
+          floor: e.target.value
+        });
         break;
 
       case "area":
-        addressDup["area"] = e.target.value;
+        setOnChangeAddressStore({
+          ...addressDup,
+          area: e.target.value
+        });
         break;
 
       case "landmark":
-        addressDup["landmark"] = e.target.value;
+        setOnChangeAddressStore({
+          ...addressDup,
+          landmark: e.target.value
+        });
         break;
 
       case "town":
-        addressDup["town"] = e.target.value;
+        setOnChangeAddressStore({
+          ...addressDup,
+          town: e.target.value
+        });
         break;
 
       case "city":
-        addressDup["city"] = e.target.value;
+        setOnChangeAddressStore({
+          ...addressDup,
+          city: e.target.value
+        });
         break;
 
       case "pincode":
-        addressDup["pincode"] = e.target.value;
+        setOnChangeAddressStore({
+          ...addressDup,
+          pincode: e.target.value
+        });
         break;
 
       default:
         return;
     }
-
-    setOnChangeAddressStore(addressDup);
   }
 
   function handleSubmit() {

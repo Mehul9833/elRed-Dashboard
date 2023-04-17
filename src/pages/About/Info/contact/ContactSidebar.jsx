@@ -1,11 +1,10 @@
 import React from "react";
 import { Card, CardBody } from "reactstrap";
 import { AiFillDelete } from "react-icons/ai";
-import { FaAddressBook, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaAddressBook, FaEnvelope, FaPhone, FaPen } from "react-icons/fa";
 import EmailSection from "./EmailSection";
 import PhoneSection from "./PhoneSection";
 
-import { TbPencil } from "react-icons/tb";
 import DarkRedButton from "../../../../components/ui/DarkRedButton";
 
 const ContactSidebar = (props) => {
@@ -27,11 +26,12 @@ const ContactSidebar = (props) => {
                       onClick={() => props.handleDeleteContact(index)}
                     />
 
-                    <TbPencil
+                    <FaPen
                       onClick={() => {
                         props.setShowForm(true);
                         props.setEditId(details.id);
                       }}
+                      className="pencil"
                     />
                   </div>
                 </div>

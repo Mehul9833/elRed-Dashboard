@@ -309,6 +309,52 @@
         }
       }
     }
+
+    &--statements {
+      display: flex;
+      gap: 0.5rem;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      &-statement {
+        width: 90%;
+      }
+
+      &-count {
+        p {
+          background-color: $light-red;
+          color: $red;
+          border-radius: 50%;
+          padding: 4px;
+          font-size: 0.8rem;
+        }
+      }
+
+      &-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        &__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &--actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            svg {
+              color: $red;
+              font-size: 1.2rem;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

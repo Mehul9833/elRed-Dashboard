@@ -80,11 +80,29 @@ ol {
     &--title {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 1.25rem;
 
-      svg {
-        font-size: 1.6rem;
+      &-name {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+          font-size: 1.6rem;
+          cursor: pointer;
+        }
+      }
+
+      &-action {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $red;
         cursor: pointer;
+        svg {
+          font: 0.5rem;
+        }
       }
 
       h3 {
@@ -139,4 +157,5 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   max-height: 100%;
+  gap: 1.2rem;
 }

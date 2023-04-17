@@ -117,7 +117,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.5rem;
         gap: 0.5rem;
 
         &--title {
@@ -148,150 +148,6 @@
         color: $red;
       }
     }
-
-    // &--contact {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-
-    //   &-email {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     margin-bottom: 0.5rem;
-
-    //     p {
-    //       margin-bottom: 0;
-    //     }
-
-    //     i {
-    //       margin-right: 0.5rem;
-    //     }
-    //   }
-
-    //   &-emailId {
-    //     line-height: 1.2rem;
-    //   }
-
-    //   &-count {
-    //     background-color: $faint-red;
-    //     color: $red;
-    //     border-radius: 50%;
-    //     padding: 5px;
-    //     font-size: 0.7rem;
-    //     font-weight: 600;
-    //   }
-
-    //   &-phone {
-    //     display: flex;
-    //     align-items: center;
-
-    //     p {
-    //       margin-bottom: 0;
-    //     }
-
-    //     i {
-    //       margin-right: 0.5rem;
-    //     }
-    //   }
-
-    //   &-details {
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 0.8rem;
-
-    //     &__card {
-    //       display: flex;
-
-    //       flex-direction: column;
-    //       gap: 1.25rem;
-    //     }
-
-    //     &--header {
-    //       display: flex;
-    //       align-items: center;
-    //       justify-content: space-between;
-
-    //       &__name {
-    //         display: flex;
-    //         align-items: center;
-    //         gap: 0.9rem;
-    //         p {
-    //           margin-bottom: 0;
-    //           color: $text-dark;
-    //           font-weight: 500;
-    //         }
-
-    //         svg {
-    //           font-size: 1rem;
-    //           color: $text-light;
-    //         }
-    //       }
-
-    //       &__actions {
-    //         display: flex;
-    //         align-items: center;
-    //         gap: 0.5rem;
-    //         color: $red;
-    //         font-size: 0.9rem;
-
-    //         // svg {
-
-    //         //   color: $text-light;
-    //         // }
-    //       }
-
-    //       &__delete {
-    //         font-size: 1rem;
-    //         cursor: pointer;
-    //       }
-
-    //       &__pencil {
-    //         font-size: 0.9rem;
-    //         cursor: pointer;
-    //       }
-    //     }
-
-    //     &__information {
-    //       display: flex;
-    //       align-items: center;
-    //       gap: 0.9rem;
-
-    //       svg {
-    //         font-size: 1rem;
-    //         color: $text-light;
-    //       }
-
-    //       &--email {
-    //         display: flex;
-    //         align-items: center;
-    //         gap: 0.9rem;
-
-    //         svg {
-    //           width: 20%;
-    //         }
-
-    //         &-count {
-    //           background-color: $light-red;
-    //           color: $red;
-    //           border-radius: 50%;
-    //           padding: 4px;
-    //           font-size: 0.8rem;
-    //         }
-    //       }
-
-    //       &--info {
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         word-break: break-word;
-
-    //         p {
-    //           margin-bottom: 0;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
 
     &--contact {
       display: flex;
@@ -388,6 +244,19 @@
           width: 94%;
           margin-bottom: 0;
         }
+      }
+    }
+
+    &--location {
+      display: flex;
+      height: 75%;
+
+      p {
+        margin-bottom: 0;
+        color: $text-medium;
+        line-height: 1.6rem;
+        font-size: 1rem;
+        font-weight: 500;
       }
     }
   }

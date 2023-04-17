@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContentCard from "../../../../components/ui/ContentCard";
 import { RiContactsBookLine } from "react-icons/ri";
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 import RightSidebar from "../../../../components/ui/RightSidebar";
 
@@ -15,11 +15,7 @@ const Contact = () => {
     {
       id: 1,
       name: "Sales Team",
-      emails: [
-        "salesteam01@gmail.com",
-        "aasthadoshi@gmail.com",
-        "mehulchaudhary330@gmail.com"
-      ],
+      emails: ["salesteam01@gmail.com", "aasthadoshi@gmail.com"],
       phones: ["9833240843", "8879882527", "5698547859"]
     },
     {
@@ -83,7 +79,11 @@ const Contact = () => {
         </div>
       </ContentCard>
       {showSidebar && (
-        <RightSidebar toggle={handleToggleCanvase} isOpen={showSidebar}>
+        <RightSidebar
+          toggle={handleToggleCanvase}
+          isOpen={showSidebar}
+          title={"Contacts"}
+        >
           {!showForm && (
             <ContactSidebar
               contactDetails={contactDetails}

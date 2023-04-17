@@ -1,6 +1,6 @@
 import React from "react";
 import Contact from "./contact/Contact";
-import Address from "./Address";
+import Address from "./address/Address";
 import Hours from "./Hours";
 import Socials from "./Socials";
 import Statements from "./Statements";

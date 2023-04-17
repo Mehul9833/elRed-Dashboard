@@ -1,12 +1,7 @@
 import React from "react";
 import { Card, CardBody } from "reactstrap";
 import { AiFillDelete } from "react-icons/ai";
-import {
-  FaAddressBook,
-  FaEnvelope,
-  FaPencilAlt,
-  FaPhone
-} from "react-icons/fa";
+import { FaAddressBook, FaEnvelope } from "react-icons/fa";
 import EmailSection from "./EmailSection";
 import PhoneSection from "./PhoneSection";
 

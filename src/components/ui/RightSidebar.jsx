@@ -13,7 +13,7 @@ const RightSidebar = (props) => {
       <OffcanvasBody>
         <div className="offcanvas__header">
           <RiArrowLeftLine onClick={props.toggle} />
-          <h3>Contacts</h3>
+          <h3>{props.title}</h3>
         </div>
 
         {props.children}
